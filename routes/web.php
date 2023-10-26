@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Event;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,9 @@ use App\Models\Event;
 */
 
 Route::get('/', function () {
-
     $events = Event::all();
-    
+
     return view('welcome', ['events' => $events]);
 });
 
+Route::resource('events', EventController::class);
