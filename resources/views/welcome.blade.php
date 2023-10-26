@@ -13,6 +13,11 @@
 
     </head>
     <body>
-        <h1>my message is {{ $message }}</h1>
+        @foreach ($events as $event)
+
+            <div>{{ $event->name }}</div>
+
+        @endforeach
+                
     </body>
 </html>
