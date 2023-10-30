@@ -14,7 +14,7 @@ class EventController extends Controller
     {
         $events = Event::all();
 
-        return view('welcome', ['events' => $events]);
+        return view('events.index', ['events' => $events]);
     }
 
     /**
@@ -22,7 +22,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('events.create');
     }
 
     /**
@@ -30,7 +30,6 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-
         $data = $request->all();
 
         Event::create($data);

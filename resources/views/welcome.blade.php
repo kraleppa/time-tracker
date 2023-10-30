@@ -1,35 +1,23 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.master')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <h1 class="mt-4">
+        Welcome to Time Tracker!
+    </h1>
 
+    <div class="d-flex align-items-center justify-content-between p-4">
+        <div class="d-flex flex-column gap-4 align-items-center">
+            <div>            
+                <h4>We love helping you thrive!</h4>
+                Simplify Your Life. Sign up now and master your schedule!
+            </div>
+            <a href="/events" class="btn btn-success w-75">Manage your events</a>
 
-    </head>
+        </div>
 
+        <img src="{{ asset('img/time.png') }}">
 
-    <form action="/events" method="POST">
-        @csrf
-       <input type="text" name="name">
-       <input type="text" name="description">
-       <input type="date" name="start_date">
-       <input type="date" name="end_date">
-       <input type="text" name="image_url">
+    </div>
 
-       <button type="submit">Add</button> 
-    </form>
-    <body>
-        @foreach ($events as $event)
-
-            <div>{{ $event->name }}</div>
-
-        @endforeach
-                
-    </body>
-</html>
+@endsection
