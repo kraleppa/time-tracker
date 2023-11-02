@@ -22,3 +22,4 @@ Route::get('/', function () {
 });
 
 Route::resource('events', EventController::class);
+Route::resource('categories', CategoryController::class);

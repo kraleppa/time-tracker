@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -22,7 +23,9 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('events.create');
+        $categories = Category::all();
+
+        return view('events.create', ['categories' => $categories]);
     }
 
     /**
@@ -31,7 +34,7 @@ class EventController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-
+ 
         Event::create($data);
 
         return redirect('/events');
