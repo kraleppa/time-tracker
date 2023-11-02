@@ -11,7 +11,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link" href="/events">My events</a>
+                <a class="nav-link" href="/events">Events</a>
+                <a class="nav-link" href="/categories">Categories</a>
                 <a class="nav-link" href="/events/create">Add new event</a>
             </div>
         </div>
