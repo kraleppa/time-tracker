@@ -13,7 +13,9 @@
             <div class="navbar-nav">
                 <a class="nav-link" href="/events">Events</a>
                 <a class="nav-link" href="/categories">Categories</a>
-                <a class="nav-link" href="/events/create">Add new event</a>
+                <a class="nav-link" href="/events/create">New event</a>
+                <a class="nav-link" href="/categories/create">New category</a>
+
             </div>
         </div>
     </div>
