@@ -34,7 +34,7 @@ class EventController extends Controller
 
         Event::create($data);
 
-        return redirect('/');
+        return redirect('/events');
     }
 
     /**

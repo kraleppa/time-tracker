@@ -26,7 +26,7 @@
         <div class="col py-2">
             <div class="card">
                 <div class="card-body">
-                    <div class="float-end text-muted">From {{ $event->start_date }} to {{ $event->end_date }}</div>
+                    <div class="float-end text-muted">From {{ $event->start_date }} to {{ $event->end_date }} {{ $event->category->name }}</div>
                     <h4 class="card-title">{{ $event->name }}</h4>
                     <p>{{ $event->description }}</p>
                 </div>

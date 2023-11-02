@@ -11,4 +11,8 @@ class Event extends Model
 
     protected $fillable = array('name', 'description', 'start_date', 'end_date', 'image_url');
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class,'category_id');
+    }
 }
