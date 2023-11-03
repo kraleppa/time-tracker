@@ -13,13 +13,14 @@
                         <span>{{ $category->name }}</span>
                     </div>
                     <div>
-
-                        <a href="/categories/{{ $category->id }}/edit" class="btn btn-outline-warning">Edit</a>
-                        <form action="/categories/{{ $category->id }}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-outline-danger">Delete</button>
-                        </form>
+                        <div class="d-flex gap-2">
+                            <a href="/categories/{{ $category->id }}/edit" class="btn btn-outline-warning">Edit</a>
+                            <form action="/categories/{{ $category->id }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-outline-danger">Delete</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
 

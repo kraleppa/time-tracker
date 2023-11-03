@@ -56,7 +56,7 @@ class EventController extends Controller
     {
         $event = Event::find($id);
         $categories = Category::all();
-        
+
         return view('events.edit', ['event' => $event, 'categories' => $categories]);
     }
 
@@ -70,7 +70,7 @@ class EventController extends Controller
         
         $event->update($data);
 
-        return redirect('/events');
+        return redirect('/events'.'/'.$id);
     }
 
     /**
