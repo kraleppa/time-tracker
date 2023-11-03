@@ -11,7 +11,7 @@
         <div class="mt-3">
             <label for="category-input" class="form-label">Category</label>
             <select id="category-input" class="form-select" aria-label="Category" name="category_id">
-                <option selected>Open this select menu</option>
+                <option selected value={{null}}>No category</option>
                 @foreach ($categories as $category)
                     <option value={{ $category->id }}>{{ $category->name }}</option>
                 @endforeach

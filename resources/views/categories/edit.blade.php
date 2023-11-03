@@ -14,6 +14,6 @@
             <input id="color-input"  class="form-control" type="color" name="color" value="{{ $category->color }}">
         </div>
 
-        <button type="submit" class="btn btn-primary mt-4">Add</button> 
+        <button type="submit" class="btn btn-primary mt-4">Update</button> 
     </form>
 @endsection

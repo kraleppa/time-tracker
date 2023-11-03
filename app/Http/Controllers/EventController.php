@@ -52,24 +52,34 @@ class EventController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Event $event)
+    public function edit($id)
     {
-        //
+        $event = Event::find($id);
+        $categories = Category::all();
+        
+        return view('events.edit', ['event' => $event, 'categories' => $categories]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Event $event)
+    public function update(Request $request, $id)
     {
-        //
+        $event = Event::find($id);
+        $data = $request->all();
+        
+        $event->update($data);
+
+        return redirect('/events');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Event $event)
+    public function destroy($id)
     {
-        //
+        Event::find($id)->delete();
+
+        return redirect('/events');
     }
 }

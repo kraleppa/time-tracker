@@ -29,7 +29,10 @@
     </div>
 
     <div class="row mt-4">
-        <div class="col">{{ $event->description }}</div>
+        <div class="col">
+            <h3>Description</h3>
+            {{ $event->description }}
+        </div>
     </div>
 
 @endsection
