@@ -14,7 +14,7 @@
                     </div>
                     <div>
 
-                        <button type="button" class="btn btn-outline-warning">Edit</button>
+                        <a href="/categories/{{ $category->id }}/edit" class="btn btn-outline-warning">Edit</a>
                         <form action="/categories/{{ $category->id }}" method="post">
                             @csrf
                             @method('DELETE')

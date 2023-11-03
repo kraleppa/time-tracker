@@ -37,28 +37,32 @@ class CategoryController extends Controller
         return redirect('/categories'); 
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Category $category)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category)
+    public function edit($id)
     {
-        //
+        $category = Category::find($id);
+        return view('categories.edit', ['category' => $category]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|max:63',
+            'color' => 'required',
+        ]);
+
+        $category = Category::find($id);
+        $data = $request->all();
+        
+        $category->update($data);
+
+        return redirect('/categories');
     }
 
     /**
@@ -67,7 +71,7 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         Category::find($id)->delete();
-        
+
         return redirect('/categories');
     }
 }
