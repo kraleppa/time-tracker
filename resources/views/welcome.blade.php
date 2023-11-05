@@ -10,9 +10,9 @@
         <div class="d-flex flex-column gap-4">
             <div>            
                 <h4>We love helping you thrive!</h4>
-                Simplify Your Life. Sign up now and master your schedule!
+                Simplify Your Life. Manage events like a pro!
             </div>
-            <a href="/events" class="btn btn-primary w-75">Manage your events</a>
+            <a href="/events" class="btn btn-primary w-75">See events</a>
 
         </div>
 
