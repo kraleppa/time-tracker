@@ -3,7 +3,7 @@
 @section('content')
     
     @foreach ($events as $event)
-        <a href="/events/{{ $event->id }}" class="row nostyle ">
+        <a href="/events/{{ $event->id }}" class="row nostyle">
             <div class="col-auto text-center flex-column d-none d-sm-flex">
                 <div class="row h-50">
                     @if (!$loop->first)
