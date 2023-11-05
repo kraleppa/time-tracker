@@ -30,7 +30,7 @@
             </ul>
             <div class="d-flex gap-1 navbar-nav">
                 @if (Auth::check())
-                    <a class="nav-link" href="/profile">Profile</a>
+                    <a class="nav-link" href="/profile">{{ Auth::user()->name }}</a>
                     <form action="/logout" method="POST">
                         @csrf
                         <button type="submit" class="nav-link border-0 bg-transparent">Logout</button>
