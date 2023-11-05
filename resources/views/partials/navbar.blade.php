@@ -34,7 +34,8 @@
                     <form action="/logout" method="POST">
                         @csrf
                         <button type="submit" class="nav-link border-0 bg-transparent">Logout</button>
-                    </form>                @else
+                    </form>                
+                @else
                     <a class="nav-link" href="/login">Login</a>
                     <a class="nav-link" href="/register">Register</a>
                 @endif
