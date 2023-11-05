@@ -4,8 +4,8 @@
     <form action="/events" method="POST" class="w-75">
         @csrf
         <div class="mt-3">
-            <label for="name-input" class="form-label">Name</label>
-            <input id="name-input"  class="form-control" type="text" name="name">
+            <label for="name-input" class="form-label">Name <span class="text-danger">*</span></label>
+            <input id="name-input"  class="form-control" type="text" name="name" required>
         </div>
 
         <div class="mt-3">
@@ -24,13 +24,13 @@
         </div>
 
         <div class="mt-3">
-            <label for="start-date-input" class="form-label">Start date</label>
-            <input id="start-date-input"  class="form-control" type="date" name="start_date">
+            <label for="start-date-input" class="form-label">Start date <span class="text-danger">*</span></label>
+            <input id="start-date-input"  class="form-control" type="date" name="start_date" required>
         </div>
 
         <div class="mt-3">
-            <label for="end-date-input" class="form-label">End date</label>
-            <input id="end-date-input"  class="form-control" type="date" name="end_date">
+            <label for="end-date-input" class="form-label">End date <span class="text-danger">*</span></label>
+            <input id="end-date-input"  class="form-control" type="date" name="end_date" required>
         </div>
 
         <div class="mt-3">

@@ -52,11 +52,6 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'name' => 'required|max:63',
-            'color' => 'required',
-        ]);
-
         $category = Category::find($id);
         $data = $request->all();
         

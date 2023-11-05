@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
 
             $table->string('name');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->date('start_date');
             $table->date('end_date');
-            $table->text('image_url');
+            $table->text('image_url')->nullable();
 
 
             $table->timestamps();
