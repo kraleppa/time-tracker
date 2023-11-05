@@ -7,3 +7,21 @@ a.nostyle:visited {
     text-decoration: inherit;
     color: inherit;
 }
+
+.print-ignore {
+    background-color: blue;
+}
+
+@media print {
+    #events-print-panel {
+        display: none !important;
+    }
+
+    nav {
+        display: none !important;
+    }
+
+    footer {
+        display: none !important;
+    }
+}
