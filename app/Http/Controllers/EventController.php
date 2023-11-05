@@ -12,8 +12,8 @@ class EventController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        $events = Event::all();
+    {   
+        $events = Event::orderBy('start_date', 'ASC')->get();
 
         return view('events.index', ['events' => $events]);
     }
