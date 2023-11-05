@@ -15,12 +15,14 @@
                 </div>
             @endif
             <div class="mt-4 d-flex gap-2">
-                <a href="/events/{{ $event->id }}/edit" class="btn btn-outline-warning">Edit</a>
-                <form action="/events/{{ $event->id }}" method="post">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-outline-danger">Delete</button>
-                </form>
+                @if (Auth::check())
+                    <a href="/events/{{ $event->id }}/edit" class="btn btn-outline-warning">Edit</a>
+                    <form action="/events/{{ $event->id }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                    </form>
+                @endif
             </div>
         </div>
         <div class="col">
